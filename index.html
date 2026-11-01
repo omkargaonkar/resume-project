@@ -1,0 +1,2304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090d18" />
+    <meta
+      name="description"
+      content="Omkar Gaonkar — Cloud Engineer and Engineering Lead specializing in Google Cloud, Azure, DevOps, infrastructure automation and cloud-native development."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="og-3d-favicon.png"
+    />
+    <link rel="shortcut icon" href="og-3d-favicon.ico" />
+    <link rel="apple-touch-icon" href="og-3d-favicon.png" />
+    <title>Omkar Gaonkar | Cloud Engineer & Engineering Lead</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      :root {
+        --bg: #080d17;
+        --panel: #111a2b;
+        --panel2: #141f31;
+        --text: #edf5ff;
+        --muted: #a1b0c4;
+        --line: #29384c;
+        --accent: #6bf0c2;
+        --accent2: #79a7ff;
+        --nav: rgba(8, 13, 23, 0.85);
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+      }
+
+      :root.light {
+        --bg: #f7f9fc;
+        --panel: #fff;
+        --panel2: #f0f5fa;
+        --text: #14243b;
+        --muted: #52637c;
+        --line: #dbe4ef;
+        --accent: #087e65;
+        --accent2: #365fd6;
+        --nav: rgba(247, 249, 252, 0.9);
+        --shadow: 0 24px 80px rgba(25, 45, 75, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        line-height: 1.65;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      ::selection {
+        background: var(--accent);
+        color: var(--bg);
+      }
+
+      .container {
+        max-width: 1160px;
+        margin: auto;
+        padding: 0 26px;
+      }
+
+      .skip {
+        position: absolute;
+        left: -999px;
+      }
+
+      .skip:focus {
+        left: 16px;
+        top: 16px;
+        z-index: 99;
+        padding: 10px;
+        background: var(--accent);
+        color: var(--bg);
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: var(--nav);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.8px;
+      }
+
+      .logo-mark {
+        display: grid;
+        place-items: center;
+        width: 37px;
+        height: 37px;
+        background: var(--accent);
+        color: var(--bg);
+        border-radius: 11px;
+        font-weight: 700;
+      }
+
+      .navlinks {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .navlinks a {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--muted);
+        transition: color 0.2s;
+      }
+
+      .navlinks a:hover,
+      .navlinks a:focus-visible {
+        color: var(--accent);
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon-btn {
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--line);
+        color: var(--text);
+        background: var(--panel);
+        border-radius: 11px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+
+      .hero {
+        padding: 104px 0 90px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero:before {
+        content: "";
+        position: absolute;
+        right: -260px;
+        top: -360px;
+        width: 880px;
+        height: 880px;
+        background: radial-gradient(
+          circle,
+          rgba(74, 120, 254, 0.12),
+          transparent 65%
+        );
+        pointer-events: none;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 65px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border-radius: 100px;
+        border: 1px solid var(--line);
+        background: var(--panel);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 4px rgba(107, 240, 194, 0.12);
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Space Grotesk", sans-serif;
+        line-height: 1.15;
+      }
+
+      h1 {
+        font-size: clamp(44px, 5.5vw, 76px);
+        letter-spacing: -3.6px;
+        margin: 25px 0 22px;
+      }
+
+      h1 span,
+      .gradient {
+        background: linear-gradient(100deg, var(--accent), var(--accent2));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .hero p {
+        max-width: 650px;
+        font-size: 17px;
+        color: var(--muted);
+        margin-bottom: 30px;
+      }
+
+      .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        min-height: 46px;
+        padding: 11px 20px;
+        border: 1px solid var(--line);
+        border-radius: 11px;
+        font-size: 13px;
+        font-weight: 700;
+        transition:
+          transform 0.2s,
+          background 0.2s;
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+      }
+
+      .btn.primary {
+        background: var(--accent);
+        color: var(--bg);
+        border-color: var(--accent);
+      }
+
+      .btn.secondary {
+        background: var(--panel);
+      }
+
+      .mini-stats {
+        display: flex;
+        gap: 35px;
+        margin-top: 44px;
+      }
+
+      .mini-stats strong {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 27px;
+        display: block;
+        line-height: 1.2;
+      }
+
+      .mini-stats small {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .terminal {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transform: rotate(1deg);
+      }
+
+      .term-head {
+        height: 45px;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 0 18px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .term-head span {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #fc6b75;
+      }
+
+      .term-head span:nth-child(2) {
+        background: #f5ca6d;
+      }
+
+      .term-head span:nth-child(3) {
+        background: #6ae09c;
+      }
+
+      .term-head em {
+        font-size: 11px;
+        margin: auto;
+        color: var(--muted);
+        font-style: normal;
+      }
+
+      .term-body {
+        padding: 30px 26px 35px;
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+        font-size: 13px;
+        line-height: 2.15;
+      }
+
+      .term-body .dim {
+        color: var(--muted);
+      }
+
+      .term-body .green {
+        color: var(--accent);
+      }
+
+      .term-body .blue {
+        color: var(--accent2);
+      }
+
+      .term-body .indent {
+        padding-left: 20px;
+      }
+
+      .term-bottom {
+        border-top: 1px solid var(--line);
+        background: var(--panel2);
+        padding: 16px 24px;
+        display: flex;
+        gap: 9px;
+        align-items: center;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .term-bottom .dot {
+        width: 6px;
+        height: 6px;
+      }
+
+      section {
+        padding: 87px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 38px;
+      }
+
+      .kicker {
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .section-heading h2 {
+        font-size: clamp(30px, 3.5vw, 43px);
+        margin: 11px 0;
+        letter-spacing: -1.6px;
+      }
+
+      .section-heading p {
+        color: var(--muted);
+        max-width: 660px;
+        margin: 0;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        gap: 24px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 27px;
+      }
+
+      .card p {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .about-copy p {
+        margin-top: 0;
+        font-size: 15px;
+      }
+
+      .about-copy strong {
+        color: var(--text);
+      }
+
+      .about-facts {
+        display: grid;
+        gap: 17px;
+      }
+
+      .fact small {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .fact strong {
+        font-size: 14px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tag {
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 6px 11px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--muted);
+        background: var(--panel2);
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .skill-card {
+        min-height: 230px;
+      }
+
+      .skill-icon {
+        width: 43px;
+        height: 43px;
+        border: 1px solid rgba(107, 240, 194, 0.3);
+        background: rgba(107, 240, 194, 0.07);
+        color: var(--accent);
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        font-size: 22px;
+        margin-bottom: 24px;
+      }
+
+      .card h3 {
+        font-size: 18px;
+        margin: 0 0 13px;
+      }
+
+      .skill-card .tags {
+        margin-top: 16px;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 19px;
+      }
+
+      .project-card {
+        padding: 0;
+        overflow: hidden;
+      }
+
+      .project-visual {
+        height: 165px;
+        background:
+          radial-gradient(
+            ellipse at 70% 10%,
+            rgba(107, 240, 194, 0.2),
+            transparent 55%
+          ),
+          linear-gradient(135deg, #172a43, #0b1425);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .project-visual.blue {
+        background:
+          radial-gradient(
+            ellipse at 70% 10%,
+            rgba(100, 152, 255, 0.3),
+            transparent 55%
+          ),
+          linear-gradient(135deg, #1b2748, #0b1425);
+      }
+
+      .project-visual.purple {
+        background:
+          radial-gradient(
+            ellipse at 70% 10%,
+            rgba(194, 132, 255, 0.3),
+            transparent 55%
+          ),
+          linear-gradient(135deg, #262141, #0b1425);
+      }
+
+      .project-visual.gold {
+        background:
+          radial-gradient(
+            ellipse at 70% 10%,
+            rgba(255, 188, 103, 0.23),
+            transparent 55%
+          ),
+          linear-gradient(135deg, #2d2635, #0b1425);
+      }
+
+      .diagram {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transform: scale(1);
+        font-family: ui-monospace, monospace;
+        color: #e8f7ff;
+      }
+
+      .diagram span {
+        padding: 12px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.17);
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .diagram b {
+        color: #6bf0c2;
+      }
+
+      .project-content {
+        padding: 26px;
+      }
+
+      .project-content h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+      }
+
+      .project-content p {
+        margin: 0 0 19px;
+        min-height: 65px;
+      }
+
+      .project-content .tag {
+        background: transparent;
+      }
+
+      .project-caption {
+        color: var(--accent);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      .timeline {
+        position: relative;
+        display: grid;
+        gap: 16px;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 170px 1fr;
+        gap: 22px;
+      }
+
+      .timeline-date {
+        padding: 23px 0;
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 13px;
+      }
+
+      .timeline .card {
+        padding: 23px 27px;
+      }
+
+      .timeline h3 {
+        margin: 0 0 5px;
+      }
+
+      .timeline .role {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--accent2);
+      }
+
+      .timeline p {
+        margin: 10px 0 0;
+      }
+
+      .certs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .cert {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+      }
+
+      .cert .seal {
+        font-size: 25px;
+      }
+
+      .cert h3 {
+        font-size: 15px;
+        margin: 0 0 5px;
+      }
+
+      .cert p {
+        font-size: 12px;
+        margin: 0;
+      }
+
+      .contact-panel {
+        display: grid;
+        grid-template-columns: 1.3fr 0.7fr;
+        align-items: center;
+        gap: 25px;
+        background: linear-gradient(120deg, var(--panel), var(--panel2));
+        border: 1px solid var(--line);
+        border-radius: 23px;
+        padding: 42px;
+      }
+
+      .contact-panel h2 {
+        font-size: 38px;
+        letter-spacing: -1.5px;
+        margin: 13px 0;
+      }
+
+      .contact-panel p {
+        color: var(--muted);
+        font-size: 15px;
+        max-width: 590px;
+      }
+
+      .contact-actions {
+        display: grid;
+        gap: 12px;
+      }
+
+      .contact-actions .btn {
+        width: 100%;
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .footer-row a {
+        color: var(--accent);
+      }
+
+      @media (max-width: 950px) {
+        .hero-grid {
+          gap: 28px;
+        }
+
+        .hero {
+          padding: 75px 0;
+        }
+
+        .navlinks {
+          gap: 17px;
+        }
+
+        .navlinks a {
+          font-size: 12px;
+        }
+
+        .skills,
+        .certs {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .diagram {
+          transform: scale(0.85);
+        }
+      }
+
+      @media (max-width: 720px) {
+        .container {
+          padding: 0 20px;
+        }
+
+        .nav {
+          min-height: 66px;
+        }
+
+        .menu-btn {
+          display: grid;
+        }
+
+        .navlinks {
+          display: none;
+          position: absolute;
+          top: 65px;
+          left: 0;
+          right: 0;
+          padding: 22px;
+          background: var(--panel);
+          border-bottom: 1px solid var(--line);
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+        }
+
+        .navlinks.open {
+          display: flex;
+        }
+
+        .navlinks a {
+          padding: 11px 0;
+          font-size: 15px;
+        }
+
+        .hero-grid,
+        .about-grid,
+        .contact-panel {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding: 66px 0 48px;
+        }
+
+        .terminal {
+          margin-top: 15px;
+          transform: none;
+        }
+
+        h1 {
+          letter-spacing: -2px;
+        }
+
+        .hero p {
+          font-size: 15px;
+        }
+
+        .mini-stats {
+          gap: 24px;
+        }
+
+        .mini-stats strong {
+          font-size: 23px;
+        }
+
+        section {
+          padding: 65px 0;
+        }
+
+        .skills,
+        .project-grid,
+        .certs {
+          grid-template-columns: 1fr;
+        }
+
+        .skill-card {
+          min-height: auto;
+        }
+
+        .timeline-item {
+          grid-template-columns: 1fr;
+          gap: 4px;
+        }
+
+        .timeline-date {
+          padding: 8px 2px 0;
+        }
+
+        .contact-panel {
+          padding: 26px;
+        }
+
+        .contact-panel h2 {
+          font-size: 30px;
+        }
+
+        .project-visual {
+          height: 150px;
+        }
+
+        .diagram {
+          transform: scale(0.85);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        * {
+          transition: none !important;
+        }
+      }
+
+      /* Services */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .service-card {
+        position: relative;
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent);
+        box-shadow: var(--shadow);
+      }
+      .service-icon {
+        width: 52px;
+        height: 52px;
+        display: grid;
+        place-items: center;
+        border-radius: 14px;
+        background: var(--panel2);
+        border: 1px solid var(--line);
+        color: var(--accent);
+        margin-bottom: 23px;
+      }
+      .service-icon svg {
+        width: 26px;
+        height: 26px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .service-card p {
+        margin-bottom: 0;
+      }
+      @media (max-width: 950px) {
+        .services-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 720px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Skills & proficiency section */
+      .proficiency-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+      .proficiency-layout > .card {
+        min-width: 0;
+      }
+      .proficiency-layout .card h3 {
+        margin-bottom: 24px;
+      }
+      .proficiency-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 28px;
+      }
+      .proficiency-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        margin-bottom: 9px;
+      }
+      .proficiency-label span {
+        color: var(--accent);
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+      }
+      .proficiency-track {
+        height: 9px;
+        border-radius: 100px;
+        background: var(--panel2);
+        border: 1px solid var(--line);
+        overflow: hidden;
+      }
+      .proficiency-track > span {
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, var(--accent), var(--accent2));
+        border-radius: inherit;
+      }
+      .cloud-table-wrap {
+        width: 100%;
+        overflow-x: auto;
+      }
+      .cloud-comparison {
+        border-collapse: collapse;
+        width: 100%;
+        min-width: 480px;
+        font-size: 13px;
+      }
+      .cloud-comparison th {
+        color: var(--accent);
+        text-align: left;
+        background: var(--panel2);
+        font-size: 13px;
+      }
+      .cloud-comparison th,
+      .cloud-comparison td {
+        padding: 13px 15px;
+        border-bottom: 1px solid var(--line);
+        width: 50%;
+      }
+      .cloud-comparison tbody tr:last-child td {
+        border-bottom: 0;
+      }
+      .cloud-comparison tbody tr:hover {
+        background: var(--panel2);
+      }
+      @media (max-width: 720px) {
+        .proficiency-grid {
+          grid-template-columns: 1fr;
+        }
+        .cloud-comparison {
+          font-size: 12px;
+        }
+      }
+
+      /* Social profiles */
+      .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 25px;
+      }
+      .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        min-height: 44px;
+        padding: 10px 15px;
+        border: 1px solid var(--line);
+        border-radius: 11px;
+        background: var(--panel);
+        color: var(--text);
+        font-size: 13px;
+        font-weight: 700;
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+      }
+      .social-link:hover,
+      .social-link:focus-visible {
+        transform: translateY(-3px);
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .social-link i {
+        font-size: 21px;
+        width: 23px;
+        text-align: center;
+        color: var(--accent2);
+        transition: color 0.2s;
+      }
+      .social-link:hover i,
+      .social-link:focus-visible i {
+        color: var(--accent);
+      }
+      .social-link span {
+        white-space: nowrap;
+      }
+
+      /* Floating resume card: remains visible as the page scrolls */
+      .resume-float {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        z-index: 50;
+        width: min(330px, calc(100vw - 32px));
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        padding: 15px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--panel);
+        box-shadow: 0 18px 55px rgba(0, 0, 0, 0.3);
+      }
+      .resume-float-art {
+        flex: 0 0 61px;
+        width: 61px;
+        height: 70px;
+        display: grid;
+        place-items: center;
+        border-radius: 13px;
+        background: linear-gradient(140deg, var(--accent), var(--accent2));
+        color: #071321;
+      }
+      .resume-float-art svg {
+        width: 39px;
+        height: 43px;
+      }
+      .resume-float-content {
+        min-width: 0;
+        flex: 1;
+      }
+      .resume-float-content strong {
+        display: block;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 14px;
+        line-height: 1.3;
+        padding-right: 15px;
+      }
+      .resume-float-content p {
+        margin: 3px 0 9px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.4;
+      }
+      .resume-float-download {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        border-radius: 8px;
+        background: var(--accent);
+        color: var(--bg);
+        font-size: 12px;
+        font-weight: 800;
+        padding: 7px 11px;
+      }
+      .resume-float-download:hover,
+      .resume-float-download:focus-visible {
+        filter: brightness(1.1);
+      }
+      .resume-float-close {
+        position: absolute;
+        top: 5px;
+        right: 7px;
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 1;
+        padding: 4px 7px;
+      }
+      .resume-float-reopen {
+        display: none;
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        z-index: 50;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--accent);
+        color: var(--bg);
+        padding: 12px 17px;
+        font-weight: 800;
+        box-shadow: var(--shadow);
+        cursor: pointer;
+      }
+      .resume-float[hidden] {
+        display: none;
+      }
+      .resume-float-reopen.visible {
+        display: block;
+      }
+      @media (max-width: 720px) {
+        .resume-float {
+          right: 12px;
+          bottom: 12px;
+          width: min(305px, calc(100vw - 24px));
+          padding: 11px;
+        }
+        .resume-float-art {
+          flex-basis: 48px;
+          width: 48px;
+          height: 57px;
+        }
+        .resume-float-art svg {
+          width: 32px;
+        }
+        .resume-float-reopen {
+          right: 12px;
+          bottom: 12px;
+        }
+      }
+      /* Branded 3D logo in the sticky navigation */
+      .logo .logo-mark {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+        padding: 0;
+        background: transparent;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .logo .logo-mark img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="logo" href="#home"
+          ><span class="logo-mark"
+            ><img
+              src="og-3d-favicon.png"
+              alt="Omkar Gaonkar 3D OG logo"
+              width="40"
+              height="40"
+          /></span>
+          Omkar<span style="color: var(--accent)">.</span></a
+        >
+        <div class="navlinks" id="navlinks">
+          <a href="#about">About</a><a href="#services">Services</a
+          ><a href="#skills">Expertise</a><a href="#skill-levels">Skills</a
+          ><a href="#projects">Projects</a><a href="#experience">Experience</a
+          ><a href="#certifications">Certifications</a
+          ><a href="#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <button
+            class="icon-btn"
+            id="theme-toggle"
+            aria-label="Toggle light theme"
+            title="Toggle theme"
+          >
+            ☼</button
+          ><button
+            class="icon-btn menu-btn"
+            id="menu-toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="navlinks"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">
+              <span class="dot"></span> Cloud Engineering · DevOps · Leadership
+            </div>
+            <h1>Hi, I'm <span>Omkar.</span><br />I build for the cloud.</h1>
+            <p>
+              Cloud Engineer & Engineering Lead with
+              <strong style="color: var(--text)">9+ years of experience</strong>
+              building reliable applications, modernizing enterprise systems,
+              and automating infrastructure across Google Cloud and Azure.
+            </p>
+            <div class="buttons">
+              <a class="btn primary" href="#projects"
+                >Explore My Work <span aria-hidden="true">↗</span></a
+              ><a class="btn secondary" href="#contact"
+                >Get in Touch <span aria-hidden="true">→</span></a
+              >
+            </div>
+            <div class="mini-stats">
+              <div><strong>9+</strong><small>Years of experience</small></div>
+              <div><strong>2</strong><small>Cloud platforms</small></div>
+              <div><strong>6+</strong><small>Cloud certifications</small></div>
+            </div>
+          </div>
+          <div
+            class="terminal"
+            aria-label="Developer profile displayed as code"
+          >
+            <div class="term-head">
+              <span></span><span></span><span></span><em>profile.yaml</em>
+            </div>
+            <div class="term-body">
+              <div><span class="dim"># cloud engineer profile</span></div>
+              <div>
+                <span class="blue">name:</span>
+                <span class="green">"Omkar Gaonkar"</span>
+              </div>
+              <div><span class="blue">role:</span> "Engineering Lead"</div>
+              <div><span class="blue">location:</span> "Pune, India"</div>
+              <div><span class="blue">cloud:</span></div>
+              <div class="indent">- Google Cloud Platform</div>
+              <div class="indent">- Microsoft Azure</div>
+              <div><span class="blue">specialties:</span></div>
+              <div class="indent">- Infrastructure as Code</div>
+              <div class="indent">- Kubernetes & DevOps</div>
+              <div class="indent">- Data Engineering</div>
+              <div>
+                <span class="blue">mindset:</span>
+                <span class="green">"Build. Automate. Scale."</span>
+              </div>
+            </div>
+            <div class="term-bottom">
+              <span class="dot"></span> Open to exciting cloud engineering
+              opportunities
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container">
+          <div class="section-heading">
+            <span class="kicker">01 / About</span>
+            <h2>Engineering with <span class="gradient">purpose.</span></h2>
+            <p>
+              A software engineering foundation, strengthened by cloud
+              architecture, automation, and delivery leadership.
+            </p>
+          </div>
+          <div class="about-grid">
+            <div class="card about-copy">
+              <p>
+                I'm a <strong>Cloud Engineer and Engineering Lead</strong> based
+                in Pune, India. Over the past nine years, I've worked across
+                enterprise application development, API integrations,
+                infrastructure automation, and cloud-native delivery.
+              </p>
+              <p>
+                My focus is on creating scalable cloud solutions using
+                <strong
+                  >GCP, Azure, Terraform, Kubernetes, Python, and CI/CD</strong
+                >
+                — while keeping security, cost, observability, and reliability
+                at the center of every decision.
+              </p>
+              <p>
+                I enjoy taking complex engineering challenges and turning them
+                into well-structured systems that teams can build, operate, and
+                improve.
+              </p>
+              <div class="tags">
+                <span class="tag">Cloud Architecture</span
+                ><span class="tag">Infrastructure Automation</span
+                ><span class="tag">Platform Engineering</span
+                ><span class="tag">Tech Leadership</span>
+              </div>
+            </div>
+            <div class="card about-facts">
+              <div class="fact">
+                <small>Based in</small><strong>Pune, Maharashtra, India</strong>
+              </div>
+              <div class="fact">
+                <small>Current / Recent role</small
+                ><strong>Engineering Lead</strong>
+              </div>
+              <div class="fact">
+                <small>Focus areas</small
+                ><strong>GCP · DevOps · Cloud-Native Engineering</strong>
+              </div>
+              <div class="fact">
+                <small>Personal website</small
+                ><strong
+                  ><a
+                    href="https://omkargaonkar.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style="color: var(--accent)"
+                    >omkargaonkar.com ↗</a
+                  ></strong
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading">
+            <span class="kicker">02 / What I Offer</span>
+            <h2 id="services-title">
+              My <span class="gradient">Services.</span>
+            </h2>
+            <p>
+              Thoughtful digital solutions, from initial concept to development,
+              growth, and ongoing support.
+            </p>
+          </div>
+          <div class="services-grid">
+            <article class="card service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <path d="M3 9h18M8 4v5M7 15h4m-2-2v4" />
+                </svg>
+              </div>
+              <h3>Web Design</h3>
+              <p>
+                Crafting visually stunning and user-friendly websites tailored
+                to your needs.
+              </p>
+            </article>
+            <article class="card service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="m12 3 2.7 5.3L20 11l-5.3 2.7L12 19l-2.7-5.3L4 11l5.3-2.7L12 3Z"
+                  />
+                  <path
+                    d="m19 17 .8 1.7L21.5 19.5l-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8L19 17Z"
+                  />
+                </svg>
+              </div>
+              <h3>Branding</h3>
+              <p>
+                Building a unique identity that sets your business apart from
+                the competition.
+              </p>
+            </article>
+            <article class="card service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 20V11m6 9V5m6 15v-7m4 7V9" />
+                  <path d="M2 21h20" />
+                </svg>
+              </div>
+              <h3>Analytics</h3>
+              <p>
+                Delivering actionable insights to optimize your online
+                performance and strategy.
+              </p>
+            </article>
+            <article class="card service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-11-2 14" />
+                </svg>
+              </div>
+              <h3>Web Development</h3>
+              <p>
+                Creating robust, scalable, and responsive websites to elevate
+                your digital presence.
+              </p>
+            </article>
+            <article class="card service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="m3 11 12-5v12L3 13v-2Zm12-3 4-2v12l-4-2M6 14l2 6h4l-2-5"
+                  />
+                </svg>
+              </div>
+              <h3>Web Marketing</h3>
+              <p>
+                Driving targeted traffic and boosting your online visibility
+                with proven strategies.
+              </p>
+            </article>
+            <article class="card service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4 13v-2a8 8 0 0 1 16 0v2M4 13H2v5h4v-5H4Zm16 0h2v5h-4v-5h2ZM20 18a5 5 0 0 1-5 4h-3"
+                  />
+                </svg>
+              </div>
+              <h3>Support</h3>
+              <p>
+                Providing reliable and prompt assistance to ensure your website
+                runs seamlessly.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <div class="container">
+          <div class="section-heading">
+            <span class="kicker">03 / Expertise</span>
+            <h2>My technical <span class="gradient">toolkit.</span></h2>
+            <p>
+              From application code to production infrastructure, I work across
+              the modern cloud stack.
+            </p>
+          </div>
+          <div class="skills">
+            <article class="card skill-card">
+              <div class="skill-icon">☁</div>
+              <h3>Cloud Platforms</h3>
+              <p>
+                Designing, deploying, and operating cloud-native services and
+                enterprise infrastructure.
+              </p>
+              <div class="tags">
+                <span class="tag">GCP</span><span class="tag">Azure</span
+                ><span class="tag">GKE</span><span class="tag">Cloud Run</span
+                ><span class="tag">Cloud Functions</span>
+              </div>
+            </article>
+            <article class="card skill-card">
+              <div class="skill-icon">⌘</div>
+              <h3>DevOps & IaC</h3>
+              <p>
+                Repeatable delivery through automation, pipelines, containers,
+                and infrastructure as code.
+              </p>
+              <div class="tags">
+                <span class="tag">Terraform</span><span class="tag">Docker</span
+                ><span class="tag">Kubernetes</span
+                ><span class="tag">Jenkins</span
+                ><span class="tag">Cloud Build</span>
+              </div>
+            </article>
+            <article class="card skill-card">
+              <div class="skill-icon">▤</div>
+              <h3>Data Engineering</h3>
+              <p>
+                Building batch and streaming pipelines that move, transform, and
+                analyze data.
+              </p>
+              <div class="tags">
+                <span class="tag">BigQuery</span><span class="tag">Pub/Sub</span
+                ><span class="tag">Dataflow</span
+                ><span class="tag">Dataproc</span
+                ><span class="tag">Composer</span>
+              </div>
+            </article>
+            <article class="card skill-card">
+              <div class="skill-icon">{ }</div>
+              <h3>Software Development</h3>
+              <p>
+                Creating secure APIs, business applications, and maintainable
+                backend and frontend systems.
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span><span class="tag">.NET</span
+                ><span class="tag">Angular</span
+                ><span class="tag">REST APIs</span><span class="tag">SQL</span>
+              </div>
+            </article>
+            <article class="card skill-card">
+              <div class="skill-icon">♧</div>
+              <h3>Networking & Security</h3>
+              <p>
+                Building cloud environments with access control and network
+                protection in mind.
+              </p>
+              <div class="tags">
+                <span class="tag">IAM</span><span class="tag">VPC</span
+                ><span class="tag">Workload Identity</span
+                ><span class="tag">Secret Manager</span>
+              </div>
+            </article>
+            <article class="card skill-card">
+              <div class="skill-icon">◉</div>
+              <h3>Observability & Operations</h3>
+              <p>
+                Supporting reliable production services with metrics, logs,
+                alerts, and issue resolution.
+              </p>
+              <div class="tags">
+                <span class="tag">Cloud Monitoring</span
+                ><span class="tag">Grafana</span
+                ><span class="tag">Prometheus</span
+                ><span class="tag">Logging</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="skill-levels" aria-labelledby="skill-levels-title">
+        <div class="container">
+          <div class="section-heading">
+            <span class="kicker">04 / Skills</span>
+            <h2 id="skill-levels-title">
+              Skills &amp; <span class="gradient">proficiency.</span>
+            </h2>
+            <p>
+              A snapshot of my web development and cloud technology skill set,
+              alongside GCP and Azure service expertise.
+            </p>
+          </div>
+          <div class="proficiency-layout">
+            <div class="card">
+              <h3>Technical proficiency</h3>
+              <div class="proficiency-grid">
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>HTML5</strong><span>95%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="HTML5"
+                    aria-valuenow="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 95%"></span>
+                  </div>
+                </div>
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>CSS3</strong><span>93%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="CSS3"
+                    aria-valuenow="93"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 93%"></span>
+                  </div>
+                </div>
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>jQuery</strong><span>90%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="jQuery"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 90%"></span>
+                  </div>
+                </div>
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>PHP</strong><span>89%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="PHP"
+                    aria-valuenow="89"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 89%"></span>
+                  </div>
+                </div>
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>MySQL</strong><span>85%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="MySQL"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 85%"></span>
+                  </div>
+                </div>
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>AngularJS</strong><span>90%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="AngularJS"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 90%"></span>
+                  </div>
+                </div>
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>GCP</strong><span>85%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="GCP"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 85%"></span>
+                  </div>
+                </div>
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>Azure</strong><span>90%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="Azure"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 90%"></span>
+                  </div>
+                </div>
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>WordPress</strong><span>90%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="WordPress"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 90%"></span>
+                  </div>
+                </div>
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>Drupal</strong><span>85%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="Drupal"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 85%"></span>
+                  </div>
+                </div>
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>Design</strong><span>100%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="Design"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 100%"></span>
+                  </div>
+                </div>
+                <div class="proficiency-item">
+                  <div class="proficiency-label">
+                    <strong>SASS</strong><span>70%</span>
+                  </div>
+                  <div
+                    class="proficiency-track"
+                    role="progressbar"
+                    aria-label="SASS"
+                    aria-valuenow="70"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span style="width: 70%"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <h3>GCP &amp; Azure technologies</h3>
+              <div class="cloud-table-wrap">
+                <table class="cloud-comparison">
+                  <thead>
+                    <tr>
+                      <th scope="col">Google Cloud Platform (GCP)</th>
+                      <th scope="col">Microsoft Azure</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Compute Engine</td>
+                      <td>Azure Virtual Machines</td>
+                    </tr>
+                    <tr>
+                      <td>Google Kubernetes Engine (GKE)</td>
+                      <td>Azure Kubernetes Service (AKS)</td>
+                    </tr>
+                    <tr>
+                      <td>Cloud Run &amp; Cloud Functions</td>
+                      <td>Azure Functions &amp; App Service</td>
+                    </tr>
+                    <tr>
+                      <td>BigQuery &amp; Dataflow</td>
+                      <td>Azure Synapse &amp; Data Factory</td>
+                    </tr>
+                    <tr>
+                      <td>Cloud Storage</td>
+                      <td>Azure Blob Storage &amp; ADLS Gen2</td>
+                    </tr>
+                    <tr>
+                      <td>Pub/Sub &amp; Cloud Composer</td>
+                      <td>Event Hubs &amp; Logic Apps</td>
+                    </tr>
+                    <tr>
+                      <td>Cloud SQL &amp; Firestore</td>
+                      <td>Azure SQL &amp; Cosmos DB</td>
+                    </tr>
+                    <tr>
+                      <td>Cloud Build &amp; Cloud Deploy</td>
+                      <td>Azure DevOps Pipelines</td>
+                    </tr>
+                    <tr>
+                      <td>Cloud IAM &amp; Secret Manager</td>
+                      <td>Microsoft Entra ID &amp; Key Vault</td>
+                    </tr>
+                    <tr>
+                      <td>Cloud Monitoring &amp; Logging</td>
+                      <td>Azure Monitor &amp; Application Insights</td>
+                    </tr>
+                    <tr>
+                      <td>VPC &amp; Cloud NAT</td>
+                      <td>Azure VNet &amp; NAT Gateway</td>
+                    </tr>
+                    <tr>
+                      <td>Terraform &amp; Infrastructure as Code</td>
+                      <td>Terraform &amp; ARM/Bicep</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <div class="container">
+          <div class="section-heading">
+            <span class="kicker">05 / Selected Work</span>
+            <h2>Projects & <span class="gradient">solutions.</span></h2>
+            <p>
+              Representative architectures and engineering work. Add outcomes
+              and metrics from your own projects before publishing.
+            </p>
+          </div>
+          <div class="project-grid">
+            <article class="card project-card">
+              <div class="project-visual">
+                <div class="diagram">
+                  <span>On-Prem DB</span><b>→</b><span>Data Pipeline</span
+                  ><b>→</b><span>BigQuery</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-caption">
+                  Cloud Migration · Data Engineering
+                </div>
+                <h3>Enterprise Data Modernization</h3>
+                <p>
+                  Cloud migration architecture for moving enterprise data into
+                  analytics-ready platforms using controlled ingestion,
+                  transformation, and validation.
+                </p>
+                <div class="tags">
+                  <span class="tag">GCP</span><span class="tag">BigQuery</span
+                  ><span class="tag">Cloud Storage</span
+                  ><span class="tag">Python</span>
+                </div>
+              </div>
+            </article>
+            <article class="card project-card">
+              <div class="project-visual blue">
+                <div class="diagram">
+                  <span>Git</span><b>→</b><span>CI/CD</span><b>→</b
+                  ><span>GKE</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-caption">Platform Engineering · DevOps</div>
+                <h3>Automated Cloud Deployment</h3>
+                <p>
+                  Infrastructure-as-code and CI/CD workflows for versioned,
+                  repeatable deployments of containerized applications.
+                </p>
+                <div class="tags">
+                  <span class="tag">Terraform</span
+                  ><span class="tag">Kubernetes</span
+                  ><span class="tag">Docker</span
+                  ><span class="tag">Jenkins</span>
+                </div>
+              </div>
+            </article>
+            <article class="card project-card">
+              <div class="project-visual purple">
+                <div class="diagram">
+                  <span>Pub/Sub</span><b>→</b><span>Dataflow</span><b>→</b
+                  ><span>Warehouse</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-caption">
+                  Streaming · Event-Driven Systems
+                </div>
+                <h3>Real-Time Data Processing</h3>
+                <p>
+                  Event-driven ingestion design with transformations, error
+                  routing, observability, and scalable downstream analytics.
+                </p>
+                <div class="tags">
+                  <span class="tag">Pub/Sub</span
+                  ><span class="tag">Dataflow</span
+                  ><span class="tag">BigQuery</span
+                  ><span class="tag">Monitoring</span>
+                </div>
+              </div>
+            </article>
+            <article class="card project-card">
+              <div class="project-visual gold">
+                <div class="diagram">
+                  <span>Angular</span><b>↔</b><span>REST API</span><b>↔</b
+                  ><span>Database</span>
+                </div>
+              </div>
+              <div class="project-content">
+                <div class="project-caption">
+                  Enterprise Applications · Full Stack
+                </div>
+                <h3>Enterprise Service Platform</h3>
+                <p>
+                  Developed and enhanced enterprise application features, APIs,
+                  dashboards, reporting, and integrations for cross-functional
+                  teams.
+                </p>
+                <div class="tags">
+                  <span class="tag">Angular</span><span class="tag">.NET</span
+                  ><span class="tag">REST APIs</span
+                  ><span class="tag">PostgreSQL</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="experience">
+        <div class="container">
+          <div class="section-heading">
+            <span class="kicker">06 / Journey</span>
+            <h2>Professional <span class="gradient">experience.</span></h2>
+            <p>
+              Building strong software foundations and expanding into cloud
+              engineering and leadership.
+            </p>
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-date">2021 — 2026</div>
+              <div class="card">
+                <h3>Persistent Systems</h3>
+                <div class="role">Lead Software Engineer</div>
+                <p>
+                  Enterprise product engineering, cloud-focused development,
+                  service integrations, delivery automation, and
+                  cross-functional technical execution.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">2020 — 2021</div>
+              <div class="card">
+                <h3>Capgemini</h3>
+                <div class="role">Associate Consultant</div>
+                <p>
+                  Enterprise software implementation, application development,
+                  and client delivery.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">2018 — 2020</div>
+              <div class="card">
+                <h3>Atos Syntel</h3>
+                <div class="role">Associate Consultant</div>
+                <p>
+                  Application engineering, integration, enhancement, and support
+                  for enterprise solutions.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <div class="timeline-date">2017 — 2018</div>
+              <div class="card">
+                <h3>OSSeed</h3>
+                <div class="role">Software Developer</div>
+                <p>
+                  Started my professional journey building and maintaining web
+                  applications.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="certifications">
+        <div class="container">
+          <div class="section-heading">
+            <span class="kicker">07 / Credentials</span>
+            <h2>Always <span class="gradient">learning.</span></h2>
+            <p>
+              Cloud certifications that reflect continuous technical growth.
+            </p>
+          </div>
+          <div class="certs">
+            <div class="card cert">
+              <div class="seal">✦</div>
+              <div>
+                <h3>Google Certified – Professional Cloud Architect</h3>
+                <p>Google</p>
+              </div>
+            </div>
+            <div class="card cert">
+              <div class="seal">✦</div>
+              <div>
+                <h3>Google Certified – Professional Data Engineer</h3>
+                <p>Google</p>
+              </div>
+            </div>
+            <div class="card cert">
+              <div class="seal">✦</div>
+              <div>
+                <h3>Google Certified – Associate Cloud Engineer</h3>
+                <p>Google</p>
+              </div>
+            </div>
+            <div class="card cert">
+              <div class="seal">✦</div>
+              <div>
+                <h3>Google Certified – Cloud Digital Leader</h3>
+                <p>Google</p>
+              </div>
+            </div>
+            <div class="card cert">
+              <div class="seal">✦</div>
+              <div>
+                <h3>Microsoft Certified: Azure Data Engineer Associate</h3>
+                <p>Microsoft</p>
+              </div>
+            </div>
+            <div class="card cert">
+              <div class="seal">✦</div>
+              <div>
+                <h3>Microsoft Certified: Azure Developer Associate</h3>
+                <p>Microsoft</p>
+              </div>
+            </div>
+            <div class="card cert">
+              <div class="seal">✦</div>
+              <div>
+                <h3>
+                  Microsoft Certified: Azure Database Administrator Associate
+                </h3>
+                <p>Microsoft</p>
+              </div>
+            </div>
+            <div class="card cert">
+              <div class="seal">✦</div>
+              <div>
+                <h3>Microsoft Certified: Azure Data Fundamentals</h3>
+                <p>Microsoft</p>
+              </div>
+            </div>
+            <div class="card cert">
+              <div class="seal">✦</div>
+              <div>
+                <h3>Microsoft Certified: Azure Fundamentals</h3>
+                <p>Microsoft</p>
+              </div>
+            </div>
+            <div class="card cert">
+              <div class="seal">✦</div>
+              <div>
+                <h3>Microsoft Certified: GitHub Copilot (GH-300)</h3>
+                <p>Microsoft</p>
+              </div>
+            </div>
+            <div class="card cert">
+              <div class="seal">✦</div>
+              <div>
+                <h3>AWS Certified AI Practitioner</h3>
+                <p>AWS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <div class="contact-panel">
+            <div>
+              <span class="kicker">08 / Let's Connect</span>
+              <h2>Have something <span class="gradient">in mind?</span></h2>
+              <p>
+                I'm interested in challenging opportunities involving cloud
+                engineering, GCP, DevOps, platform modernization, and technical
+                leadership. Let's connect.
+              </p>
+            </div>
+            <div class="contact-actions">
+              <a
+                class="btn primary"
+                href="https://www.linkedin.com/in/omkargaonkar"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Connect on LinkedIn ↗</a
+              ><a
+                class="btn secondary"
+                href="https://omkargaonkar.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit Personal Website ↗</a
+              ><a
+                class="btn secondary"
+                href="mailto:hello@example.com?subject=Portfolio%20inquiry"
+                id="email-contact"
+                >Email Me ↗</a
+              >
+            </div>
+          </div>
+          <!-- <p style="color:var(--muted);font-size:12px;margin-top:15px">Before publishing: replace the example email
+          address and LinkedIn URL with your real contact details.</p> -->
+        </div>
+        <div class="container" style="margin-top: 28px">
+          <div class="card">
+            <h3>Find me online</h3>
+            <p>Connect with me across professional and social platforms.</p>
+            <div class="social-links">
+              <a
+                class="social-link"
+                href="https://twitter.com/official_omkar"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter / X"
+                ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i
+                ><span>Twitter / X</span></a
+              >
+              <a
+                class="social-link"
+                href="https://facebook.com/officialomkargaonkar"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f" aria-hidden="true"></i
+                ><span>Facebook</span></a
+              >
+              <a
+                class="social-link"
+                href="https://www.linkedin.com/in/omkargaonkar"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
+                ><span>LinkedIn</span></a
+              >
+              <a
+                class="social-link"
+                href="https://github.com/omkargaonkar"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                ><i class="fa-brands fa-github" aria-hidden="true"></i
+                ><span>GitHub</span></a
+              >
+              <a
+                class="social-link"
+                href="https://www.drupal.org/u/omkargaonkar"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Drupal"
+                ><i class="fa-brands fa-drupal" aria-hidden="true"></i
+                ><span>Drupal</span></a
+              >
+              <a
+                class="social-link"
+                href="https://www.instagram.com/officialomkargaonkar"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+                ><span>Instagram</span></a
+              >
+              <a
+                class="social-link"
+                href="https://join.skype.com/invite/gb7bKSMB8Xaf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Skype"
+                ><i class="fa-brands fa-skype" aria-hidden="true"></i
+                ><span>Skype</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer-row">
+        <span
+          >© <span id="year"></span> Omkar Gaonkar. All Rights Reserved.</span
+        ><span
+          >Designed for the cloud era
+          <span style="color: var(--accent)">✦</span></span
+        >
+      </div>
+    </footer>
+    <!-- Keep resume.pdf in the same directory as this HTML file to enable the download. -->
+    <aside
+      class="resume-float"
+      id="resume-float"
+      aria-label="Download my resume"
+    >
+      <div class="resume-float-art" aria-hidden="true">
+        <svg viewBox="0 0 48 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M10 3h19l10 10v35a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z"
+            fill="#fff"
+          />
+          <path d="M29 3v10h10" fill="#b6e8e0" />
+          <circle cx="19" cy="23" r="5" fill="#0d5f6b" />
+          <path d="M11 35c1-6 15-6 16 0" fill="#0d5f6b" />
+          <path
+            d="M30 22h5M30 28h5M13 42h22"
+            stroke="#0d5f6b"
+            stroke-width="2.5"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+      <div class="resume-float-content">
+        <strong>Interested in my profile?</strong>
+        <p>Get my latest resume and explore my experience.</p>
+        <a
+          class="resume-float-download"
+          href="https://drive.google.com/uc?export=download&amp;id=1NsDh2rUx4KBrZlTWeJ33moDi6OfDJU3P"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Omkar Gaonkar resume PDF"
+          ><i class="fa-solid fa-download" aria-hidden="true"></i> Download
+          Resume</a
+        >
+      </div>
+      <button
+        class="resume-float-close"
+        id="resume-float-close"
+        type="button"
+        aria-label="Minimize resume card"
+        title="Minimize"
+      >
+        &times;
+      </button>
+    </aside>
+    <button
+      class="resume-float-reopen"
+      id="resume-float-reopen"
+      type="button"
+      aria-label="Show resume download"
+    >
+      <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Resume
+    </button>
+    <script>
+      const resumeCard = document.getElementById("resume-float");
+      const resumeReopen = document.getElementById("resume-float-reopen");
+      document
+        .getElementById("resume-float-close")
+        .addEventListener("click", () => {
+          resumeCard.hidden = true;
+          resumeReopen.classList.add("visible");
+        });
+      resumeReopen.addEventListener("click", () => {
+        resumeCard.hidden = false;
+        resumeReopen.classList.remove("visible");
+      });
+      const root = document.documentElement;
+      const themeBtn = document.getElementById("theme-toggle");
+      const stored = localStorage.getItem("portfolio-theme");
+      if (stored === "light") {
+        root.classList.add("light");
+      }
+      function syncTheme() {
+        themeBtn.textContent = root.classList.contains("light") ? "☾" : "☼";
+        themeBtn.setAttribute(
+          "aria-label",
+          root.classList.contains("light")
+            ? "Switch to dark theme"
+            : "Switch to light theme",
+        );
+      }
+      syncTheme();
+      themeBtn.addEventListener("click", () => {
+        root.classList.toggle("light");
+        localStorage.setItem(
+          "portfolio-theme",
+          root.classList.contains("light") ? "light" : "dark",
+        );
+        syncTheme();
+      });
+      const menu = document.getElementById("menu-toggle"),
+        links = document.getElementById("navlinks");
+      menu.addEventListener("click", () => {
+        const isOpen = links.classList.toggle("open");
+        menu.setAttribute("aria-expanded", String(isOpen));
+        menu.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+        menu.textContent = isOpen ? "✕" : "☰";
+      });
+      links.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          links.classList.remove("open");
+          menu.setAttribute("aria-expanded", "false");
+          menu.setAttribute("aria-label", "Open menu");
+          menu.textContent = "☰";
+        }),
+      );
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
